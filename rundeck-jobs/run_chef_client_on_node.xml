@@ -11,7 +11,7 @@
         <exec>sudo cp -r /automation/${job.project}/${job.project}.json /home/ubuntu</exec>
       </command>
       <command>
-        <exec>/automation/${job.project}/hcm-chef-automation/platform/shell-scripts/run_chef_command.sh '${option.Role}' ${job.project}</exec>
+        <exec>/automation/${job.project}/sawtooth_automation/platform/shell-scripts/run_chef_command.sh '${option.Role}' ${job.project}</exec>
       </command>
     </sequence>
     <description>This job run the chef-client command on a node against a role, chef environment and json file passed as arguments</description>
