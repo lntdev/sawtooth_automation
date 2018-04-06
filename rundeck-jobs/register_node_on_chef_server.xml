@@ -5,7 +5,7 @@
     <multipleExecutions>true</multipleExecutions>
     <sequence keepgoing='false' strategy='node-first'>
       <command>
-        <exec>cd /home/ubuntu/chef-repo; knife bootstrap ${option.Host_IP} -N ${option.Host_Name} -x ubuntu -i /home/ubuntu/.ssh/id_rsa --sudo -E ${job.project} --template-file /home/ubuntu/sawtooth_automation/platform/rundeck-jobs/chef-full.erb ; knife tag create ${option.Host_Name} ${option.Rundeck_Tags} ; knife tag create ${option.Host_Name} ${option.Host_IP}</exec>
+        <exec>cd /home/ubuntu/chef-repo; knife bootstrap ${option.Host_IP} -N ${option.Host_Name} -x ubuntu -i /home/ubuntu/.ssh/id_rsa --sudo -E ${job.project} --template-file /home/ubuntu/sawtooth_automation/rundeck-jobs/chef-full.erb ; knife tag create ${option.Host_Name} ${option.Rundeck_Tags} ; knife tag create ${option.Host_Name} ${option.Host_IP}</exec>
       </command>
     </sequence>
     <description>This job bootstraps a node against a chef environment. This will also create tags required for rundeck</description>
